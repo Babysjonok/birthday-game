@@ -10,6 +10,16 @@
         .meme { display: none; width: 300px; margin: 10px; }
         input { padding: 10px; width: 200px; }
         button { padding: 10px 20px; margin: 10px; font-size: 16px; }
+        .name-banner {
+            font-size: 36px;
+            margin: 20px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #e6e6ff, #ccf2ff);
+            border-radius: 16px;
+            width: fit-content;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -19,7 +29,6 @@
         <button onclick="startGame()">Начать игру</button>
     </div>
 
-    
 <div class="slide" id="slide1">
     <h2>Кто это?</h2>
     <div class="memes">
@@ -29,15 +38,16 @@
         <img src="round1/meme4.jpg" class="meme" id="meme1_4">
     </div>
     <button onclick="revealNext(1)">Показать подсказку</button><br>
-    <input type="text" id="guess1" placeholder="Ваш ответ">
-    <button onclick="checkGuess(1, 'Марина')">Угадать</button>
+    <div id="inputBlock1">
+        <input type="text" id="guess1" placeholder="Ваш ответ">
+        <button onclick="checkGuess(1, 'Марина')">Угадать</button>
+    </div>
     <div class="result" id="result1"></div>
     <button onclick="goToSlide('slide1_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide1_answer">
-    <h2>Это был(а) Марина!</h2>
-    <img src="round1/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Марина!</div>
     <button onclick="goToSlide('slide2')">Следующий раунд</button>
 </div>
 
@@ -50,15 +60,16 @@
         <img src="round2/meme4.jpg" class="meme" id="meme2_4">
     </div>
     <button onclick="revealNext(2)">Показать подсказку</button><br>
-    <input type="text" id="guess2" placeholder="Ваш ответ">
-    <button onclick="checkGuess(2, 'Надежда')">Угадать</button>
+    <div id="inputBlock2">
+        <input type="text" id="guess2" placeholder="Ваш ответ">
+        <button onclick="checkGuess(2, 'Надежда')">Угадать</button>
+    </div>
     <div class="result" id="result2"></div>
     <button onclick="goToSlide('slide2_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide2_answer">
-    <h2>Это был(а) Надежда!</h2>
-    <img src="round2/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Надежда!</div>
     <button onclick="goToSlide('slide3')">Следующий раунд</button>
 </div>
 
@@ -71,15 +82,16 @@
         <img src="round3/meme4.jpg" class="meme" id="meme3_4">
     </div>
     <button onclick="revealNext(3)">Показать подсказку</button><br>
-    <input type="text" id="guess3" placeholder="Ваш ответ">
-    <button onclick="checkGuess(3, 'Саша')">Угадать</button>
+    <div id="inputBlock3">
+        <input type="text" id="guess3" placeholder="Ваш ответ">
+        <button onclick="checkGuess(3, 'Саша')">Угадать</button>
+    </div>
     <div class="result" id="result3"></div>
     <button onclick="goToSlide('slide3_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide3_answer">
-    <h2>Это был(а) Саша!</h2>
-    <img src="round3/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Саша!</div>
     <button onclick="goToSlide('slide4')">Следующий раунд</button>
 </div>
 
@@ -92,15 +104,16 @@
         <img src="round4/meme4.jpg" class="meme" id="meme4_4">
     </div>
     <button onclick="revealNext(4)">Показать подсказку</button><br>
-    <input type="text" id="guess4" placeholder="Ваш ответ">
-    <button onclick="checkGuess(4, 'Вова')">Угадать</button>
+    <div id="inputBlock4">
+        <input type="text" id="guess4" placeholder="Ваш ответ">
+        <button onclick="checkGuess(4, 'Вова')">Угадать</button>
+    </div>
     <div class="result" id="result4"></div>
     <button onclick="goToSlide('slide4_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide4_answer">
-    <h2>Это был(а) Вова!</h2>
-    <img src="round4/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Вова!</div>
     <button onclick="goToSlide('slide5')">Следующий раунд</button>
 </div>
 
@@ -113,15 +126,16 @@
         <img src="round5/meme4.jpg" class="meme" id="meme5_4">
     </div>
     <button onclick="revealNext(5)">Показать подсказку</button><br>
-    <input type="text" id="guess5" placeholder="Ваш ответ">
-    <button onclick="checkGuess(5, 'Лера')">Угадать</button>
+    <div id="inputBlock5">
+        <input type="text" id="guess5" placeholder="Ваш ответ">
+        <button onclick="checkGuess(5, 'Лера')">Угадать</button>
+    </div>
     <div class="result" id="result5"></div>
     <button onclick="goToSlide('slide5_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide5_answer">
-    <h2>Это был(а) Лера!</h2>
-    <img src="round5/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Лера!</div>
     <button onclick="goToSlide('slide6')">Следующий раунд</button>
 </div>
 
@@ -134,15 +148,16 @@
         <img src="round6/meme4.jpg" class="meme" id="meme6_4">
     </div>
     <button onclick="revealNext(6)">Показать подсказку</button><br>
-    <input type="text" id="guess6" placeholder="Ваш ответ">
-    <button onclick="checkGuess(6, 'Ренат')">Угадать</button>
+    <div id="inputBlock6">
+        <input type="text" id="guess6" placeholder="Ваш ответ">
+        <button onclick="checkGuess(6, 'Ренат')">Угадать</button>
+    </div>
     <div class="result" id="result6"></div>
     <button onclick="goToSlide('slide6_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide6_answer">
-    <h2>Это был(а) Ренат!</h2>
-    <img src="round6/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Ренат!</div>
     <button onclick="goToSlide('slide7')">Следующий раунд</button>
 </div>
 
@@ -155,15 +170,16 @@
         <img src="round7/meme4.jpg" class="meme" id="meme7_4">
     </div>
     <button onclick="revealNext(7)">Показать подсказку</button><br>
-    <input type="text" id="guess7" placeholder="Ваш ответ">
-    <button onclick="checkGuess(7, 'Мила')">Угадать</button>
+    <div id="inputBlock7">
+        <input type="text" id="guess7" placeholder="Ваш ответ">
+        <button onclick="checkGuess(7, 'Мила')">Угадать</button>
+    </div>
     <div class="result" id="result7"></div>
     <button onclick="goToSlide('slide7_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide7_answer">
-    <h2>Это был(а) Мила!</h2>
-    <img src="round7/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Мила!</div>
     <button onclick="goToSlide('slide8')">Следующий раунд</button>
 </div>
 
@@ -176,15 +192,16 @@
         <img src="round8/meme4.jpg" class="meme" id="meme8_4">
     </div>
     <button onclick="revealNext(8)">Показать подсказку</button><br>
-    <input type="text" id="guess8" placeholder="Ваш ответ">
-    <button onclick="checkGuess(8, 'Денис')">Угадать</button>
+    <div id="inputBlock8">
+        <input type="text" id="guess8" placeholder="Ваш ответ">
+        <button onclick="checkGuess(8, 'Денис')">Угадать</button>
+    </div>
     <div class="result" id="result8"></div>
     <button onclick="goToSlide('slide8_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide8_answer">
-    <h2>Это был(а) Денис!</h2>
-    <img src="round8/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Денис!</div>
     <button onclick="goToSlide('slide9')">Следующий раунд</button>
 </div>
 
@@ -197,15 +214,16 @@
         <img src="round9/meme4.jpg" class="meme" id="meme9_4">
     </div>
     <button onclick="revealNext(9)">Показать подсказку</button><br>
-    <input type="text" id="guess9" placeholder="Ваш ответ">
-    <button onclick="checkGuess(9, 'Ление')">Угадать</button>
+    <div id="inputBlock9">
+        <input type="text" id="guess9" placeholder="Ваш ответ">
+        <button onclick="checkGuess(9, 'Ление')">Угадать</button>
+    </div>
     <div class="result" id="result9"></div>
     <button onclick="goToSlide('slide9_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide9_answer">
-    <h2>Это был(а) Ление!</h2>
-    <img src="round9/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Ление!</div>
     <button onclick="goToSlide('slide10')">Следующий раунд</button>
 </div>
 
@@ -218,15 +236,16 @@
         <img src="round10/meme4.jpg" class="meme" id="meme10_4">
     </div>
     <button onclick="revealNext(10)">Показать подсказку</button><br>
-    <input type="text" id="guess10" placeholder="Ваш ответ">
-    <button onclick="checkGuess(10, 'Олег')">Угадать</button>
+    <div id="inputBlock10">
+        <input type="text" id="guess10" placeholder="Ваш ответ">
+        <button onclick="checkGuess(10, 'Олег')">Угадать</button>
+    </div>
     <div class="result" id="result10"></div>
     <button onclick="goToSlide('slide10_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide10_answer">
-    <h2>Это был(а) Олег!</h2>
-    <img src="round10/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Олег!</div>
     <button onclick="goToSlide('slide11')">Следующий раунд</button>
 </div>
 
@@ -239,55 +258,76 @@
         <img src="round11/meme4.jpg" class="meme" id="meme11_4">
     </div>
     <button onclick="revealNext(11)">Показать подсказку</button><br>
-    <input type="text" id="guess11" placeholder="Ваш ответ">
-    <button onclick="checkGuess(11, 'Марина')">Угадать</button>
+    <div id="inputBlock11">
+        <input type="text" id="guess11" placeholder="Ваш ответ">
+        <button onclick="checkGuess(11, 'Марина')">Угадать</button>
+    </div>
     <div class="result" id="result11"></div>
     <button onclick="goToSlide('slide11_answer')">Показать ответ</button>
 </div>
 
 <div class="slide" id="slide11_answer">
-    <h2>Это был(а) Марина!</h2>
-    <img src="round11/photo.jpg" width="300"><br>
+    <div class="name-banner">Это был(а) Марина!</div>
     <button onclick="goToSlide('final')">Следующий раунд</button>
 </div>
 
+
 <div class="slide" id="final">
     <h2>Спасибо за игру!</h2>
-    <p>Запиши количество баллов или передай ведущему :)</p>
+    <p>Подсчёт очков:</p>
+    <div id="scoreSummary" style="font-size: 18px; margin: 20px;"></div>
+    <button onclick="showScores()">Показать результаты</button>
 </div>
 
 
-    <script>
-        let revealed = {};
+<script>
+    let revealed = {};
 
-        function startGame() {
-            document.getElementById("start").style.display = "none";
-            goToSlide("slide1");
+    function startGame() {
+        document.getElementById("start").style.display = "none";
+        goToSlide("slide1");
+    }
+
+    function goToSlide(id) {
+        document.querySelectorAll(".slide").forEach(s => s.style.display = "none");
+        let el = document.getElementById(id);
+        if (el) el.style.display = "block";
+    }
+
+    function revealNext(round) {
+        if (!revealed[round]) revealed[round] = 0;
+        revealed[round]++;
+        let img = document.getElementById("meme" + round + "_" + revealed[round]);
+        if (img) img.style.display = "block";
+    }
+
+    function checkGuess(round, correctName) {
+        let guess = document.getElementById("guess" + round).value.trim().toLowerCase();
+        let result = document.getElementById("result" + round);
+        let inputBlock = document.getElementById("inputBlock" + round);
+        if (guess === correctName.toLowerCase()) {
+            let score = Math.max(5 - (revealed[round] - 1), 2);
+            result.textContent = "Верно! Вы заработали " + score + " баллов.";
+            inputBlock.style.display = "none";
+        } else {
+            result.textContent = "К сожалению, ты ошибся :( В конце игры ты узнаешь, кто это был!";
+            inputBlock.style.display = "none";
         }
+    }
 
-        function goToSlide(id) {
-            document.querySelectorAll(".slide").forEach(s => s.style.display = "none");
-            let el = document.getElementById(id);
-            if (el) el.style.display = "block";
-        }
-
-        function revealNext(round) {
-            if (!revealed[round]) revealed[round] = 0;
-            revealed[round]++;
-            let img = document.getElementById("meme" + round + "_" + revealed[round]);
-            if (img) img.style.display = "block";
-        }
-
-        function checkGuess(round, correctName) {
-            let guess = document.getElementById("guess" + round).value.trim().toLowerCase();
-            let result = document.getElementById("result" + round);
-            if (guess === correctName.toLowerCase()) {
-                let score = Math.max(5 - (revealed[round] - 1), 2);
-                result.textContent = "Верно! Вы заработали " + score + " баллов.";
+    function showScores() {
+        let summary = "";
+        for (let i = 1; i <= 11; i++) {
+            const result = document.getElementById("result" + i);
+            if (result && result.textContent.includes("баллов")) {
+                summary += "Раунд " + i + ": " + result.textContent + "<br>";
             } else {
-                result.textContent = "К сожалению, ты ошибся :( В конце игры ты узнаешь, кто это был!";
+                summary += "Раунд " + i + ": без ответа<br>";
             }
         }
-    </script>
+        document.getElementById("scoreSummary").innerHTML = summary;
+    }
+
+</script>
 </body>
 </html>
